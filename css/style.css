@@ -1,23 +1,48 @@
-.header-section{
+.bg-back{
+    height: 100vh;
     width: 100%;
-    height: 60vh;
-    background-image: linear-gradient(to bottom,
-    rgba(253, 203, 110,.6),
-    rgba(0, 206, 201,0.6),
-    rgba(108, 92, 231,0.6)
-    ), url('../img/bg-header.jpg');
-    background-attachment: fixed;
-    background-position-y: top;
-    background-position-x: center;
-    background-size: cover;
+    margin: 0;
+    padding: 0;
 }
-.textos{
+.fixed-bar{
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    z-index: 1030;
+}
+.bg-col1 {
+    height: 260px;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    color: rgba(255, 255, 255,1.0);
-    text-align: center;
-    overflow: hidden;
+    border: 1px solid black;
+}
+.bg-col2 {
+    height: 480px;
+    width: 100%;
+    border: 1px solid black;
+}
+.bg-col3 {
+    height: 90vh;
+    width: 100%;
+    border: 1px solid black;
+}
+@media (max-width: 576px) {
+    .bg-col1 {
+        height: 60px;
+        width: 100%;
+        border: 1px solid black;
+    }
+    .fixed-bar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .bg-col2{
+        margin-top: 60px;
+    }
+}
+@media (min-width: 768px) {
+    .max-container{
+        width: 720px;
+    }
 }
