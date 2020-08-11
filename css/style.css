@@ -1,41 +1,95 @@
 .bg-back{
-    height: 100vh;
-    width: 100%;
     margin: 0;
     padding: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom,
+    rgba(253, 203, 110,.6),
+    rgba(0, 206, 201,0.6),
+    rgba(108, 92, 231,0.6)
+    ), url('../img/bg-header.jpg');
+    background-attachment: fixed;
+    background-position-y: top;
+    background-position-x: center;
+    background-size: cover;
 }
 .fixed-bar{
     position: fixed;
     top: 10vh;
     left: 0;
     z-index: 1030;
+    padding: 0;
+    border-radius: 7px;
+
 }
 .bg-col1 {
-    height: 260px;
+    height: 325px;
     width: 100%;
-    border: 1px solid black;
+}
+#menu-nav{
+    display: flex;
+    flex-direction: column;
+}
+#menu-nav > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    font-size: small;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #2d3436;
+}
+#menu-nav > a.a-medio {
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to left, gray , white);
+    border-image-slice: 1;
+}
+#menu-nav > a:hover{
+    text-decoration: none;
+    color: red;
 }
 .bg-col2 {
     height: 480px;
     width: 100%;
-    border: 1px solid black;
+    overflow: auto;
 }
 .bg-col3 {
     height: 90vh;
     width: 100%;
-    border: 1px solid black;
 }
 @media (max-width: 576px) {
     .bg-col1 {
         height: 60px;
         width: 100%;
-        border: 1px solid black;
     }
     .fixed-bar{
         position: fixed;
         top: 0;
         left: 0;
         z-index: 1030;
+    }
+    #menu-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: auto;
+        padding: 0 40px 0 40px;
+    }
+    #menu-nav > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 65px;
+        font-size: small;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #2d3436;
+        }    
+    #menu-nav > a.a-medio {
+        border-left: 1px solid transparent;
+        border-image: linear-gradient(to top gray , white);
+        border-image-slice: 1;
     }
     .bg-col2{
         margin-top: 60px;
